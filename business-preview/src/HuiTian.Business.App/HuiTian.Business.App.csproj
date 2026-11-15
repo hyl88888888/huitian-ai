@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>HuiTian.Business</AssemblyName>
+    <RootNamespace>HuiTian.Business.App</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Version>0.1.0</Version>
+    <Product>回天 · 工作台</Product>
+    <Description>回天商业版独立本地工作台</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HuiTian.Business.Core\HuiTian.Business.Core.csproj" />
+    <ProjectReference Include="..\HuiTian.Business.Adapters\HuiTian.Business.Adapters.csproj" />
+    <ProjectReference Include="..\HuiTian.Business.Runtime\HuiTian.Business.Runtime.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,60 @@
+{
+  "date": "2026-09-24",
+  "scope": "Uncertain operation recovery visibility, no automatic replay or reconciliation",
+  "candidate": "D:\\HuiTianBusiness\\Releases\\0.1.0-preview-20260924",
+  "sources": [
+    {
+      "path": "src\\HuiTian.Business.Core\\AgentEngine.cs",
+      "sha256": "F6E8389F2F84B684E17248930215CF6E052837F45B097920E5483BF410EABCC6"
+    },
+    {
+      "path": "src\\HuiTian.Business.App\\MainWindow.xaml",
+      "sha256": "F665E76827E63EDA56BCDD33B7E6F9AF87FF734DA5F45237A1096E75CF72E51A"
+    },
+    {
+      "path": "src\\HuiTian.Business.App\\MainWindow.xaml.cs",
+      "sha256": "639F0FFF8C3E95097202430C7856CB8A4C2E941B0D114C3C921706B1FCE4EAD4"
+    },
+    {
+      "path": "src\\HuiTian.Business.App\\WorkspaceVerification.cs",
+      "sha256": "AF2B1105AB6901BF03431417E4637B3D20D1C612F9D7950D3A7BED793FD45B33"
+    },
+    {
+      "path": "tests\\HuiTian.Business.Tests\\EngineRegression.cs",
+      "sha256": "7D088EB476E0A962E336A8A369B0CEEF4C037ECE013111FB76C20A9F7BC42955"
+    },
+    {
+      "path": "tests\\HuiTian.Business.Tests\\Program.cs",
+      "sha256": "71ADBA217C8CE4D19B4EB3E88EF50B3302B1E00BD38C899DF6C3D280252CEDC4"
+    },
+    {
+      "path": "scripts\\Publish-Business.ps1",
+      "sha256": "A00E8B9BABDE18EFCAA3A9B9DE9BFE51A61FFFC12B2DCE47EAE8682FE4E50CFD"
+    }
+  ],
+  "binaries": [
+    {
+      "path": "HuiTian.Business.exe",
+      "sha256": "86DB9AB365B2B9C84328347C32230BEE67DFB56457BE02069F2FDE355FE70DF4"
+    },
+    {
+      "path": "HuiTian.Business.dll",
+      "sha256": "6359EBECD5E318D36C78C3AD95217AA1C0CCAF70C4E714C935960D76F5A02A98"
+    },
+    {
+      "path": "HuiTian.Business.Core.dll",
+      "sha256": "A31EDF2F85025FA8CB515A44B2C9B3B1AE1281DBF32D26843C45CEE39E590A17"
+    }
+  ],
+  "verification": {
+    "core": 52,
+    "adapters": 72,
+    "routing": 26,
+    "publishedWorkspace": 18,
+    "publishedLocalTools": 13,
+    "desktopSmokeRerun": false,
+    "uploadSmokeRerun": false,
+    "liveReport": "D:\\HuiTianBusiness\\Cache\\LiveValidation\\20260924-015546\\Data\\live-report.json",
+    "businessAcceptance": false
+  }
+}

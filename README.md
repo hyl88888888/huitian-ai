@@ -9,6 +9,8 @@ Windows 桌面 AI 助手的历史源码，包含聊天、语音、桌面任务�
 
 ## 项目结构
 
+本仓库同时保存两条开发线：根目录为自用版 v0.4.13；[`business-preview`](business-preview/README.md) 为独立工作台 v0.1.0 商业预览源码。两者各自的运行组件与目录约定需要分别配置。
+
 - `src/HuiTian.App`：WPF 桌面界面与语音集成。
 - `src/HuiTian.Core`：核心模型、协议和任务逻辑。
 - `src/HuiTian.Infrastructure`：服务与工具适配。
