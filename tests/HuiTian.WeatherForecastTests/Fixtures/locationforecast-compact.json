@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [116.4074, 39.9042, 43]
+  },
+  "properties": {
+    "meta": {
+      "updated_at": "2026-08-27T00:15:00Z",
+      "units": {
+        "air_temperature": "celsius",
+        "precipitation_amount": "mm",
+        "probability_of_precipitation": "percent"
+      }
+    },
+    "timeseries": [
+      {
+        "time": "2026-08-26T16:00:00Z",
+        "data": {
+          "instant": { "details": { "air_temperature": 19.5 } },
+          "next_1_hours": {
+            "summary": { "symbol_code": "clearsky_day" },
+            "details": { "precipitation_amount": 0.1 }
+          },
+          "next_6_hours": {
+            "summary": { "symbol_code": "clearsky_day" },
+            "details": { "precipitation_amount": 60.0 }
+          },
+          "next_12_hours": {
+            "summary": { "symbol_code": "clearsky_day" },
+            "details": { "probability_of_precipitation": 0.0 }
+          }
+        }
+      },
+      {
+        "time": "2026-08-27T07:00:00Z",
+        "data": {
+          "instant": { "details": { "air_temperature": 27.0 } },
+          "next_6_hours": {
+            "summary": { "symbol_code": "clearsky_day" },
+            "details": { "precipitation_amount": 0.2 }
+          },
+          "next_12_hours": {
+            "summary": { "symbol_code": "clearsky_day" },
+            "details": { "probability_of_precipitation": 5.0 }
+          }
+        }
+      },
+      {
+        "time": "2026-08-27T16:00:00Z",
+        "data": {
+          "instant": { "details": { "air_temperature": 18.0 } },
+          "next_12_hours": {
+            "summary": { "symbol_code": "partlycloudy_day" },
+            "details": { "probability_of_precipitation": 20.0 }
+          }
+        }
+      },
+      {
+        "time": "2026-08-28T07:00:00Z",
+        "data": {
+          "instant": { "details": { "air_temperature": 25.4 } },
+          "next_1_hours": {
+            "summary": { "symbol_code": "partlycloudy_day" },
+            "details": { "precipitation_amount": 1.0 }
+          },
+          "next_6_hours": {
+            "summary": { "symbol_code": "partlycloudy_day" },
+            "details": { "precipitation_amount": 62.0 }
+          },
+          "next_12_hours": {
+            "summary": { "symbol_code": "partlycloudy_day" },
+            "details": { "probability_of_precipitation": 35.0 }
+          }
+        }
+      },
+      {
+        "time": "2026-08-28T16:00:00Z",
+        "data": {
+          "instant": { "details": { "air_temperature": 17.2 } },
+          "next_6_hours": {
+            "summary": { "symbol_code": "fair_day" },
+            "details": { "precipitation_amount": 0.2 }
+          },
+          "next_12_hours": {
+            "summary": { "symbol_code": "fair_day" },
+            "details": { "probability_of_precipitation": 10.0 }
+          }
+        }
+      },
+      {
+        "time": "2026-08-29T07:00:00Z",
+        "data": {
+          "instant": { "details": { "air_temperature": 24.1 } },
+          "next_12_hours": {
+            "summary": { "symbol_code": "fair_day" },
+            "details": { "probability_of_precipitation": 10.0 }
+          }
+        }
+      },
+      {
+        "time": "2026-08-29T16:00:00Z",
+        "data": {
+          "instant": { "details": { "air_temperature": 16.4 } },
+          "next_1_hours": {
+            "summary": { "symbol_code": "cloudy" },
+            "details": { "precipitation_amount": 0.4 }
+          },
+          "next_6_hours": {
+            "summary": { "symbol_code": "cloudy" },
+            "details": { "precipitation_amount": 64.0 }
+          }
+        }
+      },
+      {
+        "time": "2026-08-30T07:00:00Z",
+        "data": {
+          "instant": { "details": { "air_temperature": 22.6 } },
+          "next_6_hours": {
+            "summary": { "symbol_code": "cloudy" },
+            "details": { "precipitation_amount": 0.6 }
+          },
+          "next_12_hours": {
+            "summary": { "symbol_code": "cloudy" },
+            "details": { "probability_of_precipitation": 45.0 }
+          }
+        }
+      },
+      {
+        "time": "2026-08-30T16:00:00Z",
+        "data": {
+          "instant": { "details": { "air_temperature": 15.3 } },
+          "next_6_hours": {
+            "summary": { "symbol_code": "lightrain" },
+            "details": { "precipitation_amount": 0.8 }
+          },
+          "next_12_hours": {
+            "summary": { "symbol_code": "lightrain" },
+            "details": { "probability_of_precipitation": 70.0 }
+          }
+        }
+      },
+      {
+        "time": "2026-08-31T07:00:00Z",
+        "data": {
+          "instant": { "details": { "air_temperature": 20.2 } },
+          "next_1_hours": {
+            "summary": { "symbol_code": "lightrain" },
+            "details": { "precipitation_amount": 1.7 }
+          },
+          "next_6_hours": {
+            "summary": { "symbol_code": "lightrain" },
+            "details": { "precipitation_amount": 65.0 }
+          }
+        }
+      },
+      {
+        "time": "2026-08-31T16:00:00Z",
+        "data": {
+          "instant": { "details": { "air_temperature": 14.8 } },
+          "next_12_hours": {
+            "summary": { "symbol_code": "heavyrainandthunder" },
+            "details": { "probability_of_precipitation": 90.0 }
+          }
+        }
+      },
+      {
+        "time": "2026-09-01T07:00:00Z",
+        "data": {
+          "instant": { "details": { "air_temperature": 19.1 } },
+          "next_6_hours": {
+            "summary": { "symbol_code": "heavyrainandthunder" },
+            "details": { "precipitation_amount": 14.0 }
+          },
+          "next_12_hours": {
+            "summary": { "symbol_code": "heavyrainandthunder" },
+            "details": { "probability_of_precipitation": 95.0 }
+          }
+        }
+      },
+      {
+        "time": "2026-09-01T16:00:00Z",
+        "data": {
+          "instant": { "details": { "air_temperature": -2.2 } },
+          "next_1_hours": {
+            "summary": { "symbol_code": "snow" },
+            "details": { "precipitation_amount": 0.9 }
+          },
+          "next_6_hours": {
+            "summary": { "symbol_code": "snow" },
+            "details": { "precipitation_amount": 67.0 }
+          }
+        }
+      },
+      {
+        "time": "2026-09-02T07:00:00Z",
+        "data": {
+          "instant": { "details": { "air_temperature": 1.8 } },
+          "next_6_hours": {
+            "summary": { "symbol_code": "snow" },
+            "details": { "precipitation_amount": 1.6 }
+          },
+          "next_12_hours": {
+            "summary": { "symbol_code": "snow" },
+            "details": { "probability_of_precipitation": 80.0 }
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,159 @@
+[
+  {
+    "id": "answer-software-comparison",
+    "text": "微信群和QQ群在管理功能上有什么区别？用几句话说明就行。",
+    "priorMessages": [],
+    "expectedModes": ["Answer"],
+    "expectedDomains": []
+  },
+  {
+    "id": "answer-howto-not-operation",
+    "text": "先别碰我的电脑，告诉我怎样让任务栏自动隐藏。",
+    "priorMessages": [],
+    "expectedModes": ["Answer"],
+    "expectedDomains": []
+  },
+  {
+    "id": "answer-draft-only",
+    "text": "替我拟一段给物业的报修留言，在这里给我看看，我自己决定发不发。",
+    "priorMessages": [],
+    "expectedModes": ["Answer"],
+    "expectedDomains": []
+  },
+  {
+    "id": "answer-emotional-followup",
+    "text": "我不是让你解释什么叫累，我是说我今天真的撑不住了。",
+    "priorMessages": [
+      { "role": "user", "text": "最近每天加班，我很累。" },
+      { "role": "assistant", "text": "累指的是身体或精神上的疲劳。" }
+    ],
+    "expectedModes": ["Answer"],
+    "expectedDomains": []
+  },
+  {
+    "id": "answer-creative-text",
+    "text": "想个适合秋天读书会的名字，别太文艺，给我五个备选。",
+    "priorMessages": [],
+    "expectedModes": ["Answer"],
+    "expectedDomains": []
+  },
+  {
+    "id": "answer-correction-with-context",
+    "text": "还是太像通知了，换成朋友之间说话的口气。",
+    "priorMessages": [
+      { "role": "user", "text": "写一句邀请朋友周六来吃饭的话，先不要发送。" },
+      { "role": "assistant", "text": "兹定于本周六举行聚餐，特此邀请您准时参加。" }
+    ],
+    "expectedModes": ["Answer"],
+    "expectedDomains": []
+  },
+  {
+    "id": "answer-history-not-current-action",
+    "text": "刚才为什么没成功？先把原因说明白，不用再试。",
+    "priorMessages": [
+      { "role": "user", "text": "把浏览器里的下载页面打开。" },
+      { "role": "assistant", "text": "页面没有打开，当前窗口连接未建立。" }
+    ],
+    "expectedModes": ["Answer"],
+    "expectedDomains": []
+  },
+  {
+    "id": "communication-indirect-operation",
+    "text": "去微信问一下我的文件传输助手能不能收到消息，就发一句连通性测试。",
+    "priorMessages": [],
+    "expectedModes": ["Operate"],
+    "expectedDomains": ["Chat"]
+  },
+  {
+    "id": "communication-draft-to-send",
+    "text": "可以，就把这句话发到我现在打开的微信会话。",
+    "priorMessages": [
+      { "role": "user", "text": "先写一句礼貌询问会议地点的短消息，不要发送。" },
+      { "role": "assistant", "text": "您好，请问明天会议的具体地点在哪里？" }
+    ],
+    "expectedModes": ["Operate"],
+    "expectedDomains": ["Chat"]
+  },
+  {
+    "id": "media-natural-listening",
+    "text": "我想听一会儿德彪西的月光，帮我把正版音源放起来。",
+    "priorMessages": [],
+    "expectedModes": ["Operate"],
+    "expectedDomains": ["Media"]
+  },
+  {
+    "id": "browser-concrete-url",
+    "text": "在浏览器里进入 https://example.com ，让我看看这个页面。",
+    "priorMessages": [],
+    "expectedModes": ["Operate"],
+    "expectedDomains": ["Browser"]
+  },
+  {
+    "id": "file-move-explicit-paths",
+    "text": "把桌面上的演练记录.txt移到桌面的测试归档文件夹，完成后核对文件在新位置。",
+    "priorMessages": [],
+    "expectedModes": ["Operate"],
+    "expectedDomains": ["File"]
+  },
+  {
+    "id": "office-printable-deliverable",
+    "text": "给新员工做一份一页的入职检查清单，我明天要打印，保存成能打开的Word文档。",
+    "priorMessages": [],
+    "expectedModes": ["Operate", "Mixed"],
+    "expectedDomains": ["Office", "Other"]
+  },
+  {
+    "id": "office-editable-calculations",
+    "text": "做个可继续填写的家庭每月支出表，收入减支出要自动算余额，给我xlsx文件。",
+    "priorMessages": [],
+    "expectedModes": ["Operate", "Mixed"],
+    "expectedDomains": ["Office", "File", "Other"]
+  },
+  {
+    "id": "research-current-source",
+    "text": "上网确认一下杭州今天发布了什么天气预警，附上气象部门的来源。",
+    "priorMessages": [],
+    "expectedModes": ["Operate", "Mixed"],
+    "expectedDomains": ["Research", "Other"]
+  },
+  {
+    "id": "multiapp-create-and-deliver",
+    "text": "做一份空白的设备借用登记表，保存好Excel文件，再把这个文件发到微信文件传输助手。",
+    "priorMessages": [],
+    "expectedModes": ["Mixed"],
+    "expectedDomains": []
+  },
+  {
+    "id": "multiapp-research-to-slides",
+    "text": "查阅近一年的公开资料，整理城市节水措施，做成六页演示文稿留在我的桌面。",
+    "priorMessages": [],
+    "expectedModes": ["Mixed", "Operate"],
+    "expectedDomains": []
+  },
+  {
+    "id": "system-context-upgrade",
+    "text": "不用教我了，你直接替我调成百分之二十。",
+    "priorMessages": [
+      { "role": "user", "text": "怎样把电脑扬声器音量调小？" },
+      { "role": "assistant", "text": "可以点击任务栏音量图标，再拖动音量滑块。" }
+    ],
+    "expectedModes": ["Operate"],
+    "expectedDomains": ["System", "Media"]
+  },
+  {
+    "id": "clarify-missing-object-and-person",
+    "text": "把那个发给他。",
+    "priorMessages": [],
+    "expectedModes": ["Clarify"],
+    "expectedDomains": []
+  },
+  {
+    "id": "clarify-ambiguous-choice",
+    "text": "打开我说的那一份。",
+    "priorMessages": [
+      { "role": "assistant", "text": "目前有两份不同的报价表：初稿与修订稿。" }
+    ],
+    "expectedModes": ["Clarify"],
+    "expectedDomains": []
+  }
+]

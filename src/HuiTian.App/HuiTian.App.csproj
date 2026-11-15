@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\HuiTian.Core\HuiTian.Core.csproj" />
+    <ProjectReference Include="..\HuiTian.Infrastructure\HuiTian.Infrastructure.csproj" />
+    <PackageReference Include="System.Speech" Version="10.0.11" />
+    <PackageReference Include="NAudio" Version="2.2.1" />
+    <Reference Include="sherpa-onnx">
+      <HintPath>..\..\vendor\sherpa-onnx\sherpa-onnx.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <None Include="..\..\vendor\sherpa-onnx\onnxruntime.dll"
+          Link="onnxruntime.dll"
+          CopyToOutputDirectory="PreserveNewest"
+          CopyToPublishDirectory="PreserveNewest" />
+    <None Include="..\..\vendor\sherpa-onnx\sherpa-onnx-c-api.dll"
+          Link="sherpa-onnx-c-api.dll"
+          CopyToOutputDirectory="PreserveNewest"
+          CopyToPublishDirectory="PreserveNewest" />
+    <Resource Include="Assets\HuiTianLogo.png" />
+    <Resource Include="Assets\HuiTianLogo.ico" />
+    <None Include="..\..\THIRD-PARTY-NOTICES.md"
+          Link="THIRD-PARTY-NOTICES.md"
+          CopyToOutputDirectory="PreserveNewest"
+          CopyToPublishDirectory="PreserveNewest" />
+    <None Include="..\..\docs\测试说明-0.4.13.txt"
+          Link="请先看我.txt"
+          CopyToOutputDirectory="PreserveNewest"
+          CopyToPublishDirectory="PreserveNewest" />
+    <None Include="..\..\vendor\openai-codex\LICENSE"
+          Link="licenses\Apache-2.0.txt"
+          CopyToOutputDirectory="PreserveNewest"
+          CopyToPublishDirectory="PreserveNewest" />
+    <None Include="..\..\vendor\llama.cpp-b10566\LICENSE"
+          Link="licenses\MIT-llama.cpp.txt"
+          CopyToOutputDirectory="PreserveNewest"
+          CopyToPublishDirectory="PreserveNewest" />
+    <None Include="D:\HuiTian\Runtime\Voice\Kokoro\LICENSE"
+          Link="licenses\Apache-2.0-Kokoro.txt"
+          CopyToOutputDirectory="PreserveNewest"
+          CopyToPublishDirectory="PreserveNewest" />
+    <None Include="D:\HuiTian\Runtime\Voice\MeloTTS\LICENSE"
+          Link="licenses\MIT-MeloTTS.txt"
+          CopyToOutputDirectory="PreserveNewest"
+          CopyToPublishDirectory="PreserveNewest" />
+    <None Include="D:\HuiTian\Cache\NuGet\naudio\2.2.1\license.txt"
+          Link="licenses\MIT-NAudio.txt"
+          CopyToOutputDirectory="PreserveNewest"
+          CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\HuiTianLogo.ico</ApplicationIcon>
+    <Version>0.4.13</Version>
+  </PropertyGroup>
+
+</Project>

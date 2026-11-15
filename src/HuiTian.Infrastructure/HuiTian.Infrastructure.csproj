@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\HuiTian.Core\HuiTian.Core.csproj" />
+    <EmbeddedResource Include="Data\geonames-cn-cities.tsv" />
+    <Content Include="..\..\vendor\weixin-fast-send\weixin_verify_target.ps1"
+             Link="vendor\weixin-fast-send\weixin_verify_target.ps1"
+             CopyToOutputDirectory="PreserveNewest"
+             CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="..\..\vendor\weixin-fast-send\weixin_watch_replies.ps1"
+             Link="vendor\weixin-fast-send\weixin_watch_replies.ps1"
+             CopyToOutputDirectory="PreserveNewest"
+             CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="..\..\vendor\weixin-fast-send\LICENSE"
+             Link="vendor\weixin-fast-send\LICENSE"
+             CopyToOutputDirectory="PreserveNewest"
+             CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="..\..\vendor\weixin-fast-send\NOTICE.md"
+             Link="vendor\weixin-fast-send\NOTICE.md"
+             CopyToOutputDirectory="PreserveNewest"
+             CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,127 @@
+<Window x:Class="HuiTian.App.ComputerControlOverlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        ShowInTaskbar="False" ShowActivated="False" Topmost="True"
+        ResizeMode="NoResize" Focusable="False"
+        UseLayoutRounding="True" SnapsToDevicePixels="True">
+    <Window.Resources>
+        <Storyboard x:Key="BorderBreathing" RepeatBehavior="Forever" AutoReverse="True">
+            <DoubleAnimation Storyboard.TargetName="OuterGlow"
+                             Storyboard.TargetProperty="Opacity"
+                             From="0.72" To="0.94" Duration="0:0:2.8" />
+            <DoubleAnimation Storyboard.TargetName="ControlBorder"
+                             Storyboard.TargetProperty="Opacity"
+                             From="0.84" To="1" Duration="0:0:2.8" />
+            <DoubleAnimation Storyboard.TargetName="GradientRotation"
+                             Storyboard.TargetProperty="Angle"
+                             From="-10" To="18" Duration="0:0:5.6" />
+        </Storyboard>
+        <Storyboard x:Key="PointerPulse" RepeatBehavior="1x">
+            <DoubleAnimation Storyboard.TargetName="PointerHalo" Storyboard.TargetProperty="Opacity"
+                             From="0.9" To="0" Duration="0:0:0.42" />
+            <DoubleAnimation Storyboard.TargetName="PointerScale" Storyboard.TargetProperty="ScaleX"
+                             From="0.32" To="1.28" Duration="0:0:0.42" />
+            <DoubleAnimation Storyboard.TargetName="PointerScale" Storyboard.TargetProperty="ScaleY"
+                             From="0.32" To="1.28" Duration="0:0:0.42" />
+            <DoubleAnimation Storyboard.TargetName="PointerRing" Storyboard.TargetProperty="Opacity"
+                             From="0.95" To="0" Duration="0:0:0.42" />
+            <DoubleAnimation Storyboard.TargetName="PointerRingScale" Storyboard.TargetProperty="ScaleX"
+                             From="0.38" To="1.38" Duration="0:0:0.42" />
+            <DoubleAnimation Storyboard.TargetName="PointerRingScale" Storyboard.TargetProperty="ScaleY"
+                             From="0.38" To="1.38" Duration="0:0:0.42" />
+        </Storyboard>
+    </Window.Resources>
+    <Grid x:Name="OverlaySurface" IsHitTestVisible="False" ClipToBounds="True">
+        <!-- Full-bleed edges, including all four corners; the middle stays transparent. -->
+        <Border x:Name="OuterGlow" BorderThickness="18" CornerRadius="0" Margin="0" Opacity="0.82">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" Opacity="0.86">
+                    <GradientStop Color="#FF49CBEA" Offset="0" />
+                    <GradientStop Color="#FF66DEF6" Offset="0.2" />
+                    <GradientStop Color="#FF846EFF" Offset="0.52" />
+                    <GradientStop Color="#FFB08CFF" Offset="0.75" />
+                    <GradientStop Color="#FF54D8ED" Offset="1" />
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Border.Effect><BlurEffect Radius="17" /></Border.Effect>
+        </Border>
+        <Border x:Name="ControlBorder" BorderThickness="4" CornerRadius="0" Margin="0" Opacity="0.88">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <LinearGradientBrush.RelativeTransform>
+                        <RotateTransform x:Name="GradientRotation" CenterX="0.5" CenterY="0.5" />
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF56D6F4" Offset="0" />
+                    <GradientStop Color="#FF8AECF9" Offset="0.24" />
+                    <GradientStop Color="#FF9A7BFF" Offset="0.53" />
+                    <GradientStop Color="#FFC09BFF" Offset="0.74" />
+                    <GradientStop Color="#FF56D6F4" Offset="1" />
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+        </Border>
+        <Border BorderThickness="8" CornerRadius="0" Margin="0" Opacity="0.40">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#FFB6F7FF" Offset="0" />
+                    <GradientStop Color="#FF73E2F2" Offset="0.33" />
+                    <GradientStop Color="#FFC5A8FF" Offset="0.62" />
+                    <GradientStop Color="#FF96ECFF" Offset="1" />
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Border.Effect><BlurEffect Radius="7" /></Border.Effect>
+        </Border>
+        <Border x:Name="ControlBanner" VerticalAlignment="Top" HorizontalAlignment="Center"
+                Margin="0,15,0,0" CornerRadius="33" Padding="24,13"
+                MinWidth="336" MinHeight="62" MaxWidth="640"
+                Background="#F00A1629" BorderBrush="#A856D6F4" BorderThickness="1.5">
+            <Border.Effect><DropShadowEffect Color="#C5000616" BlurRadius="24" ShadowDepth="5" /></Border.Effect>
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions><ColumnDefinition Width="Auto" /><ColumnDefinition Width="*" /></Grid.ColumnDefinitions>
+                <Ellipse Width="13" Height="13" Margin="0,0,13,0" VerticalAlignment="Center">
+                    <Ellipse.Fill>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#FF68E4FA" Offset="0" />
+                            <GradientStop Color="#FF9A7BFF" Offset="0.58" />
+                            <GradientStop Color="#FF56D6F4" Offset="1" />
+                        </LinearGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <TextBlock x:Name="ControlMessage" Grid.Column="1" Text="回天正在操作电脑"
+                           FontSize="20" FontWeight="SemiBold" Foreground="#FFF4FBFF"
+                           VerticalAlignment="Center" TextTrimming="CharacterEllipsis" />
+            </Grid>
+        </Border>
+        <Canvas>
+            <Grid x:Name="VirtualPointer" Width="20" Height="26" Visibility="Collapsed">
+                <Ellipse x:Name="PointerHalo" Width="29" Height="29" Opacity="0"
+                         HorizontalAlignment="Left" VerticalAlignment="Top"
+                         Margin="-13,-13,0,0" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.Fill>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#00FFFFFF" Offset="0" />
+                            <GradientStop Color="#7256D6F4" Offset="0.32" />
+                            <GradientStop Color="#A19A7BFF" Offset="0.56" />
+                            <GradientStop Color="#0056D6F4" Offset="1" />
+                        </RadialGradientBrush>
+                    </Ellipse.Fill>
+                    <Ellipse.RenderTransform><ScaleTransform x:Name="PointerScale" /></Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse x:Name="PointerRing" Width="24" Height="24" Opacity="0"
+                         HorizontalAlignment="Left" VerticalAlignment="Top"
+                         Margin="-10.5,-10.5,0,0" Stroke="#FF6CE8FA" StrokeThickness="1.8"
+                         RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform><ScaleTransform x:Name="PointerRingScale" /></Ellipse.RenderTransform>
+                </Ellipse>
+                <Path Data="M 1.5,1.5 L 1.5,18.5 L 6,14.4 L 10.3,23.5 L 14.2,21.6 L 9.9,12.7 L 17.5,12.7 Z"
+                      HorizontalAlignment="Left" VerticalAlignment="Top"
+                      Fill="#FFF7FCFF" Stroke="#FF101D30" StrokeThickness="1.5"
+                      StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round">
+                    <Path.Effect>
+                        <DropShadowEffect Color="#B3000618" BlurRadius="4" ShadowDepth="1" Direction="315" />
+                    </Path.Effect>
+                </Path>
+            </Grid>
+        </Canvas>
+    </Grid>
+</Window>
